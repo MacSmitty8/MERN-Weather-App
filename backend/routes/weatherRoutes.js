@@ -1,19 +1,11 @@
 const express = require('express')
 const router = express.Router()
+const {getWeather, updateWeather, setWeather, deleteWeather} = require('../controllers/weatherController')
 
-router.get('/', (req, res) => {
-    res.status(200).json({message: 'Weather info receieved.'})
-})
-router.post('/', (req, res) => {
-    res.status(200).json({message: 'Weather info set.'})
-})
-router.put('/:id', (req, res) => {
-    res.status(200).json({message: `Updated Weather info ${req.params.id}`})
-})
-router.delete('/:id', (req, res) => {
-    res.status(200).json({message: `Deleted Weather info ${req.params.id}`})
-})
+router.route('/').get(getWeather).post(setWeather)
+router.route('/:id').delete(deleteWeather).put(updateWeather)
+
 
 module.exports = router
 
-//Needs a get, set, update, and delete location
+//Needs a get, set, update, and delete location or weather
