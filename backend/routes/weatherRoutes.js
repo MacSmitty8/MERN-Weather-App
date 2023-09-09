@@ -1,8 +1,8 @@
 const express = require('express')
 const router = express.Router()
-const {getWeather, updateWeather, setWeather, deleteWeather} = require('../controllers/weatherController')
+const {view, updateWeather, setWeather, deleteWeather} = require('../controllers/weatherController')
 
-router.route('/').get(getWeather).post(setWeather)
+router.route('/').get(view)
 router.route('/:id').delete(deleteWeather).put(updateWeather)
 
 
