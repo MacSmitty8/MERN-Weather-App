@@ -9,6 +9,9 @@ const getWeather = (req, res) => {
 // Route GET /api/weather
 // Access ???
 const setWeather = (req, res) => {
+    if(!req.body.text) {
+        res.status(400).json({message: 'Please enter location/zipcode'})
+    }
     res.status(200).json({message: 'Weather info set.'})
 }
 
