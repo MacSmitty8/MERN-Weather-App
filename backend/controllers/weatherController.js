@@ -1,8 +1,12 @@
+//Pass ZIP code so that when entered the api will return it
+//Get the data points needed for the display on the page.
+// temperture, weather_descriptions, weather_icons, localtime
+
 const asyncHandler = require('express-async-handler')
 //This will get a weather from a user.
 // Route GET /api/weather
 // Access ???
-const getWeather =  asyncHandler(async (req, res) => {
+const view =  asyncHandler(async (req, res) => {
     res.status(200).json({message: 'Weather info receieved.'})
 })
 
@@ -30,7 +34,7 @@ const deleteWeather = async (req, res) => {
     res.status(200).json({message: 'Weather info receieved.'})
 }
 module.exports ={
-    getWeather,
+    view,
     setWeather,
     updateWeather,
     deleteWeather,
