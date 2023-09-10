@@ -8,8 +8,7 @@ const asyncHandler = require('express-async-handler')
 // Route GET /api/weather
 // Access ???
 const view =  asyncHandler(async (req, res) => {
-    //http://api.weatherstack.com/current?access_key=9fac0fa5c2a3d6a3dc3a010c9a9b4235&query=97001
-     httpsRequest.get('http://api.weatherstack.com/current?access_key=9fac0fa5c2a3d6a3dc3a010c9a9b4235&query=97001', (httpResponse) =>{
+     httpsRequest.get(`http://api.weatherstack.com/current?access_key=${process.env.API_KEY}&query=97001`, (httpResponse) =>{
            let data = [] 
            httpResponse.on('data', (d) =>{
             process.stdout.write(d);   
@@ -23,16 +22,6 @@ const view =  asyncHandler(async (req, res) => {
             //Makessure the object is readable by the browser.
            })
         })
-    // apiRequest({
-    //     uri:'http://api.weatherstack.com/current',
-    //     qs:{
-    //         access_key: '9fac0fa5c2a3d6a3dc3a010c9a9b4235',
-    //         query: '14436'
-    //     }  
-    
-    // })//.pipe(res) 
-    //Put what query was recieved later.
-    // res.status(200).json({message: 'Weather info receieved.'})
 })
 
 //This will set a weather for the user.
