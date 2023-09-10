@@ -1,6 +1,7 @@
 //Pass ZIP code so that when entered the api will return it
 //Get the data points needed for the display on the page.
 // temperture, weather_descriptions, weather_icons, localtime
+const apiKey = process.env.API_KEY
 const httpsRequest = require('http')
 
 const asyncHandler = require('express-async-handler')
@@ -8,7 +9,7 @@ const asyncHandler = require('express-async-handler')
 // Route GET /api/weather
 // Access ???
 const view =  asyncHandler(async (req, res) => {
-     httpsRequest.get(`http://api.weatherstack.com/current?access_key=${process.env.API_KEY}&query=97001`, (httpResponse) =>{
+     httpsRequest.get(`http://api.weatherstack.com/current?access_key=${apiKey}&query=97001`, (httpResponse) =>{
            let data = [] 
            httpResponse.on('data', (d) =>{
             process.stdout.write(d);   
