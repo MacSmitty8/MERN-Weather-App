@@ -45,12 +45,11 @@ const updateWeather = asyncHandler(async (req, res) => {
 //This will delete the weather info
 // Route DELETE /api/weather
 // Access ???
-const deleteWeather = async (req, res) => {
-    res.status(200).json({message: 'Weather info receieved.'})
-}
+// const deleteWeather = async (req, res) => {
+//     res.status(200).json({message: 'Weather info receieved.'})
+// }
 module.exports ={
     view,
     setWeather,
     updateWeather,
-    deleteWeather,
 }

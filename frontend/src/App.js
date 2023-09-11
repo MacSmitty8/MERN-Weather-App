@@ -3,7 +3,8 @@ import Header from './components/Header';
 import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
 import Register from './pages/Register';
-//<h1>Weather App!</h1>
+import ZipCodeSearch from './components/ZipCodeSearch';
+
 function App() {
   return (
     <div>
@@ -15,6 +16,7 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
           </Routes>
+          <ZipCodeSearch />
         </div>
       </Router>
     </div>
