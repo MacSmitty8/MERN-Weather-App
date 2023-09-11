@@ -1,9 +1,9 @@
 import React from 'react'
-
+import ZipCodeSearch from '../components/ZipCodeSearch'
 function Dashboard() {
   return (
     <div>
-      Dashboard
+      <ZipCodeSearch />
     </div>
   )
 }
