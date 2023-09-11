@@ -3,7 +3,8 @@ import React from 'react'
 const ZipCodeSearch = () => {
   return (
     <div>
-      ZipCodeSearch
+      <input type='text' placeholder='Please enter a zipcode' />
+      <button>Search</button>
     </div>
   )
 }
