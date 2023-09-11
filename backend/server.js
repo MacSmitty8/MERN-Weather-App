@@ -2,7 +2,7 @@ const express = require('express')
 const dotenv = require('dotenv').config()
 const errorHandler = require('./middleware/errorMiddleware')
 const weatherRoute = require('./routes/weatherRoutes')
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 3000
 
 
 const app = express()
