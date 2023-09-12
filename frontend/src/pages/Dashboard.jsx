@@ -1,9 +1,11 @@
 import React from 'react'
-import ZipCodeSearch from '../components/ZipCodeSearch'
+import Weather from '../components/Weather'
 function Dashboard() {
   return (
     <div>
-      <ZipCodeSearch />
+      <Weather 
+        
+      />
     </div>
   )
 }

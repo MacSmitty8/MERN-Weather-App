@@ -9,20 +9,20 @@ const asyncHandler = require('express-async-handler')
 // Route GET /api/weather
 // Access ???
 const view =  asyncHandler(async (req, res) => {
-     httpsRequest.get(`http://api.weatherstack.com/current?access_key=${apiKey}&query=97001`, (httpResponse) =>{
-           let data = [] 
-           httpResponse.on('data', (d) =>{
-            process.stdout.write(d);   
-            data.push(d)
-           })
-           httpResponse.on('end', () => {
-            console.log(data)
-            const parseData = JSON.parse(Buffer.concat(data).toString())
-            res.json(parseData)
+    //  httpsRequest.get(`http://weatherapi-com.p.rapidapi.com/forecast.json?q=11413`, (httpResponse) =>{
+    //        let data = [] 
+    //        httpResponse.on('data', (d) =>{
+    //         process.stdout.write(d);   
+    //         data.push(d)
+    //        })
+    //        httpResponse.on('end', () => {
+    //         console.log(data)
+    //         const parseData = JSON.parse(Buffer.concat(data).toString())
+    //         res.json(parseData)
             
-            //Makessure the object is readable by the browser.
-           })
-        })
+    //         //Makessure the object is readable by the browser.
+    //        })
+    //     })
 })
 
 //This will set a weather for the user.
