@@ -1,14 +1,16 @@
 //Pass ZIP code so that when entered the api will return it
 //Get the data points needed for the display on the page.
 // temperture, weather_descriptions, weather_icons, localtime
-const apiKey = process.env.API_KEY
-const httpsRequest = require('http')
+// const apiKey = process.env.API_KEY
+// const httpsRequest = require('http')
 
 const asyncHandler = require('express-async-handler')
-//This will get a weather from a user.
+const zipCode = require('../models/userModel')
+//This will get a weather or zip code from a user.
 // Route GET /weather
 // Access ???
 const view =  asyncHandler(async (req, res) => {
+    const zipCodes = await zipCode.find({})
     res.status(200).json({message: 'Weather received'})
     //  httpsRequest.get(`http://weatherapi-com.p.rapidapi.com/forecast.json?q=11413`, (httpResponse) =>{
     //        let data = [] 
