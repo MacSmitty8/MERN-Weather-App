@@ -14,6 +14,16 @@ const userSchema = mongoose.Schema({
     type: String,
     required: [true, 'Please add a password']
  },   
+ zipcode:{
+    type: Number,
+    required: [true, 'Please add a zipcode'],
+    validate:{
+        validator: function(val){
+            return val.toString().length === 5
+        },
+        message: val => `${val.value} has to be 5 digits`
+    }
+ }
 },
 {
     timestamps: true
