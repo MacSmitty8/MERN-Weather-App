@@ -59,7 +59,7 @@ function Login() {
             <p>Login and see the weather!</p>
           </section>
     
-          <section className='form'>
+          <section className='form-group'>
             <form onSubmit={onSubmit}>
               <div>
                 <input
@@ -85,7 +85,7 @@ function Login() {
               </div>
     
               <div className='form-group'>
-                <button type='submit'>
+                <button type='submit' className='btn btn-block'>
                   Submit
                 </button>
               </div>
