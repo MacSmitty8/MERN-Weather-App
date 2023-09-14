@@ -96,3 +96,4 @@ export const authSlice = createSlice({
 
 export const { reset } = authSlice.actions
 export default authSlice.reducer
+//This function is for handling how the logins, the registers, and the logouts authentication.

@@ -15,6 +15,8 @@ If you wish to run both the frontend and the back end, use 'npm run dev'. I've i
 ## Unsolved Problems
 At this time of typing, registering a user doesn't seem to work when done from the reigster page. And the login page doesn't seem to do the trick also.
 I also originally intended on having the weather icons but ran out of time trying to figure out how it would work with this one.
+
+At some point I ran into an error saying I violated the CORS Policy. We haven't talked about this in class, so I was struggling to figure out how to handle it, until I found out about installing cors into the program. While it went away, I'm not sure if it'll happen again.
 ## Future Enhancements
 Due to the fact that I did not properly plan this project out and was struggling with a majority of it, I didn't have much time to make the web pages look distinct and visually appealing. So next I'd like to make the visual looks of the website more distinct. 
 

@@ -28,6 +28,7 @@ function Header() {
               <FaSignOutAlt /> Logout
             </button>
           </li>
+          //^If a user is logged in, they have the option to log out of their account.
         ) : (
           <>
                 <li>

@@ -14,7 +14,7 @@ function Register() {
         password: '',
         confirmPassword: '',
     })
-
+    //^ Entries needed in order to register for an account.
     const {name, email, zipcode, password, confirmPassword} = formData
 
     const navigate = useNavigate()
@@ -32,7 +32,7 @@ function Register() {
       if (isSuccess || user) {
         navigate('/')
       }
-  
+      //This will take you back to the dashboard, assuming the login is successful.
       dispatch(reset())
     }, [user, isError, isSuccess, message, navigate, dispatch])
     const onChange = (e) => {
@@ -57,10 +57,11 @@ function Register() {
           dispatch(register(userData))
         }
     }
+    //If the password you put in the first password entry doesn't match with the second password entry then it'll return an error. Otherwise, it'll capture all the entered fields into data.
     if (isLoading) {
       return <Spinner />
     }
-
+    //While the things are loaded a spinner will show on screen.
   return (
     <>
       <section>
@@ -87,6 +88,15 @@ function Register() {
                 placeholder='Enter your email' 
                 onChange={onChange}    
                 />
+                </div>
+                <div className="form-group">
+                  <input type='text' 
+                id='zipcode' 
+                name='zipcode' 
+                value={zipcode} 
+                placeholder='Enter your zipcode' 
+                onChange={onChange}    
+                /> 
                 </div>
                 <div className="form-group">
                   <input type='text' 

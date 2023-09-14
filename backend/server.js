@@ -15,7 +15,8 @@ const corsOptions = {
 
 const app = express()
 app.use(cors(corsOptions)) // Use this after the variable declaration 
-
+//^ This was added into the program after one night of struggling with the backend. 
+//I got an error mentioning the CORS policy while trying to have the routes work, and after looking somethings up, I installed cors and had it be required.
 app.use(bodyParser.json())
 
 
