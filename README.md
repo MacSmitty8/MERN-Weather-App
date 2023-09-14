@@ -6,7 +6,7 @@ API Link : https://rapidapi.com/weatherapi/api/weatherapi-com
 UI Based on Windows Weather App: https://imgur.com/NB0bcjL
 
 Image of the App in Action
-[Example](Screenshot 2023-09-14 092034.jpg)
+[Example](https://cdn.discordapp.com/attachments/307293805395181579/1151876161434034257/Screenshot_2023-09-14_092034.jpg)
 ## Getting Started/Trello
 Link to Trello information below.
 https://trello.com/invite/b/Zo3bM7sQ/ATTIabb222c25ce52e20eda7c464f0fbf8584F86ACC7/weather-app
