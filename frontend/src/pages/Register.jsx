@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react"
 import { FaUser } from "react-icons/fa"
 import { useNavigate } from "react-router-dom"
-import { useSelector, useDispatch, useSelector } from "react-redux/es/hooks/useSelector"
+import { useDispatch, useSelector } from "react-redux"
 import { toast } from 'react-toastify'
-import {register, reset} from '../features/auth/authService'
+import {register, reset} from '../features/auth/authSlice'
 import Spinner from "../components/Spinner"
-
+//Make a ReadME, focus on styling, and POST Route
 function Register() {
     const [formData, setFormData] = useState({
         name: '',
@@ -68,8 +68,9 @@ function Register() {
             <FaUser /> Register
         </h1>
         <p>Please create an account</p>
-        <section>
+        <section className="form">
             <form onSubmit={onSubmit}>
+            <div className="form-group">
                 <input type='text' 
                 id='name' 
                 name='name' 
@@ -77,6 +78,8 @@ function Register() {
                 placeholder='Enter your name' 
                 onChange={onChange}    
                 />
+                </div>
+                <div className="form-group">
                   <input type='text' 
                 id='email' 
                 name='email' 
@@ -84,6 +87,8 @@ function Register() {
                 placeholder='Enter your email' 
                 onChange={onChange}    
                 />
+                </div>
+                <div className="form-group">
                   <input type='text' 
                 id='password' 
                 name='password' 
@@ -91,6 +96,8 @@ function Register() {
                 placeholder='Enter your password' 
                 onChange={onChange}    
                 />
+                </div>
+                <div className="form-group">
                   <input type='text' 
                 id='confirmPassword' 
                 name='confirmPassword' 
@@ -98,10 +105,13 @@ function Register() {
                 placeholder='Please confirm your password' 
                 onChange={onChange}    
                 />
+                </div>
+                <div className="form-group">
                 <div>
-                    <button type='submit'>
+                    <button type='submit' className='btn btn-block'>
                         Submit
                     </button>
+                </div>
                 </div>
             </form>
         </section>

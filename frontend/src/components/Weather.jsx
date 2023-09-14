@@ -5,7 +5,7 @@ const Weather = () => {
     const [zipCode, setZipCode] = useState('');
     const [weatherData, setWeatherData] = useState(null)
     const [error, setError] = useState(null)
-
+    //^ This will see if there's an error when entering an zip code, and if there is one it will show an error message.
     const apiKey = '7de7e6611emshc6288c8e83c04cap1b282cjsn6c7fccaeea66'
     const baseUrl = `https://weatherapi-com.p.rapidapi.com/forecast.json?q=${zipCode}`;
 
